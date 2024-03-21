@@ -8,20 +8,20 @@ escape_char /
 % exempt you from the conditions of the license if your use would
 % otherwise be governed by that license.
 
-% Locale for German locale in Germany
+% Locale for English locale in Germany
 
 LC_IDENTIFICATION
-title      "German locale for Germany"
-source     "Free Software Foundation, Inc."
-address    "https:////www.gnu.org//software//libc//"
+title      "English locale for Germany"
+source     "gilex-dev"
+address    "https:////github.com//gilex-dev//linux-iso-locales"
 contact    ""
-email      "bug-glibc-locales@gnu.org"
+email      "gilex-dev@proton.me"
 tel        ""
 fax        ""
-language   "German"
+language   "English"
 territory  "Germany"
 revision   "1.0"
-date       "2000-06-24"
+date       "2024-03-20"
 
 category "i18n:2012";LC_IDENTIFICATION
 category "i18n:2012";LC_CTYPE
@@ -91,16 +91,16 @@ END LC_COLLATE
 LC_MONETARY
 int_curr_symbol     "EUR "
 currency_symbol     "€"
-mon_decimal_point   ","
-mon_thousands_sep   "."
+mon_decimal_point   "."     % personal preference, ISO suggests ','
+mon_thousands_sep   " "     % personal preference, ISO suggests ' ' (narrow no break space)
 mon_grouping        3;3
 positive_sign       ""
 negative_sign       "-"
 int_frac_digits     2
 frac_digits         2
-p_cs_precedes       0
+p_cs_precedes       1
 p_sep_by_space      1
-n_cs_precedes       0
+n_cs_precedes       1
 n_sep_by_space      1
 p_sign_posn         1
 n_sign_posn         1
@@ -109,61 +109,61 @@ END LC_MONETARY
 
 LC_NUMERIC
 decimal_point   ","
-thousands_sep   "."
+thousands_sep   " "
 grouping        3;3
 END LC_NUMERIC
 
 LC_TIME
-abday	"So";"Mo";/
-	"Di";"Mi";/
-	"Do";"Fr";/
-	"Sa"
-day	"Sonntag";/
-	"Montag";/
-	"Dienstag";/
-	"Mittwoch";/
-	"Donnerstag";/
-	"Freitag";/
-	"Samstag"
+abday	"Sun";"Mon";/
+	"Tue";"Wed";/
+	"Thu";"Fri";/
+	"Sat"
+day	"Sunday";/
+	"Monday";/
+	"Tuesday";/
+	"Wednesday";/
+	"Thursday";/
+	"Friday";/
+	"Saturday"
 abmon	"Jan";"Feb";/
-	"Mär";"Apr";/
-	"Mai";"Jun";/
+	"Mar";"Apr";/
+	"May";"Jun";/
 	"Jul";"Aug";/
-	"Sep";"Okt";/
-	"Nov";"Dez"
-mon	"Januar";/
-	"Februar";/
-	"März";/
+	"Sep";"Oct";/
+	"Nov";"Dec"
+mon	"January";/
+	"February";/
+	"March";/
 	"April";/
-	"Mai";/
-	"Juni";/
-	"Juli";/
+	"May";/
+	"June";/
+	"July";/
 	"August";/
 	"September";/
-	"Oktober";/
+	"October";/
 	"November";/
-	"Dezember"
+	"December"
 am_pm   "";""
 % Appropriate date and time representation (%c)
-d_t_fmt "%a %d %b %Y %T %Z"
+d_t_fmt "%Y-%m-%dT%T %Z" % ISO 8601
 %
 % Appropriate date representation (%x)
-d_fmt   "%d.%m.%Y"
+d_fmt   "%Y-%m-%d"       % ISO 8601-ish
 %
 % Appropriate time representation (%X)
 t_fmt   "%T"
 t_fmt_ampm ""
-date_fmt	"%a %-d. %b %H:%M:%S %Z %Y"
+date_fmt	"%a %b %e %H:%M:%S %Z %Y"
 
 week    7;19971130;4
 first_weekday 2
 END LC_TIME
 
 LC_MESSAGES
-yesexpr "^[+1jJyY]"
+yesexpr "^[+1yY]"
 noexpr  "^[-0nN]"
-yesstr  "ja"
-nostr   "nein"
+yesstr  "yes"
+nostr   "no"
 END LC_MESSAGES
 
 LC_PAPER
@@ -172,23 +172,23 @@ END LC_PAPER
 
 LC_NAME
 name_fmt    "%d%t%g%t%m%t%f"
-name_miss   "Fräulein"
-name_mr     "Herr"
-name_mrs    "Frau"
-name_ms     "Frau"
+name_miss   "Miss."
+name_mr     "Mr."
+name_mrs    "Mrs."
+name_ms     "Ms."
 END LC_NAME
 
 
 LC_ADDRESS
 postal_fmt    "%f%N%a%N%d%N%b%N%s %h %e %r%N%z %T%N%c%N"
-country_name  "Deutschland"
+country_name  "Germany"
 country_post  "D"
 country_ab2   "DE"
 country_ab3   "DEU"
 country_num   276
 country_car   "D"
 country_isbn  3
-lang_name     "Deutsch"
+lang_name     "German"
 lang_ab       "de"
 lang_term     "deu"
 lang_lib      "ger"
