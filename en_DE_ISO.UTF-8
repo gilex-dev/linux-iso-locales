@@ -91,8 +91,8 @@ END LC_COLLATE
 LC_MONETARY
 int_curr_symbol     "EUR "
 currency_symbol     "€"
-mon_decimal_point   "."     % personal preference, ISO suggests ','
-mon_thousands_sep   " "     % personal preference, ISO suggests ' ' (narrow no break space)
+mon_decimal_point   "."  % personal preference, ISO suggests ','
+mon_thousands_sep   "_"  % personal preference, ISO suggests ' ' (narrow no break space)
 mon_grouping        3;3
 positive_sign       ""
 negative_sign       "-"
@@ -108,8 +108,8 @@ n_sign_posn         1
 END LC_MONETARY
 
 LC_NUMERIC
-decimal_point   ","
-thousands_sep   " "
+decimal_point   "."  % personal preference, ISO suggests ','
+thousands_sep   "_"  % personal preference, ISO suggests ' ' (narrow no break space)
 grouping        3;3
 END LC_NUMERIC
 
